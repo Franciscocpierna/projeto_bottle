@@ -1,5 +1,6 @@
 from bottle import route, run, template, static_file,get, post, request, redirect 
 import sys
+
 print(">>>>>>>>>>>>>>>", sys.getdefaultencoding())
 #from bottle import route, run, template, static_file, get, post, request, redirect  
 # usuariosautorizados={"Maria":"mariauser", "João":"joaouser","Antonio":"Antoniouser" }
@@ -10,17 +11,23 @@ usuarios_autorizados = [
     {"nome": "Antonio", "username": "antoniouser", "password": "teste123"}
 ]
 
+#rota  para arquivos estáticos
 
 @route('/static/<filename>')
 def server_static(filename):
     return static_file(filename, root='./views/static')
 
+# redirecionamento de página
+
+#@get('/')
+#@route('/login')
+#def wrong():
+#   redirect("https://franciscocpierna.github.io/projeto-social-/")
 
 @get('/')
-@route('/wrong/login')
+@route('/login')
 def wrong():
-    redirect("/right/login")
-
+   redirect("/login")
 
 
 @get('/login')  # or @route('/login')
