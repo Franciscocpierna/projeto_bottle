@@ -1,4 +1,4 @@
-from bottle import route, run, template, static_file,get, post, request, redirect 
+from bottle import route, run, template, static_file,get, post, request, redirect, response 
 import sys
 
 print(">>>>>>>>>>>>>>>", sys.getdefaultencoding())
@@ -30,21 +30,38 @@ def wrong():
    redirect("/login")
 
 
+'''@route('/login')
+def get_iso():
+    response.charset='UTF-8'
+    return u'This will be sent with ISO-LATIN-1 encoding.'
+
+
+@route('/login')
+def get_latin():
+    response.content_type = 'text/html; charset=latin1'
+    return u'UTF-8 is also known as ISO-LATIN-1.'
+'''
+
 @get('/login')  # or @route('/login')
 def login():
-  return template('login')
+    return template('login')
+
+
+
+
 
 
 @post('/login', method='POST')
 def do_login():
-
+       
     message = None
 
     try:
-
-        username = request.forms.get('username', None)
+        username = request.forms.get('username')
         password = request.forms.get('password', None)
        
+        print (username)
+        print(password)
                  
        
         if username=="":   
@@ -90,4 +107,5 @@ def get_latin():
     response.content_type = 'text/html; charset=latin9'
     return u'ISO-8859-15 is also known as latin9.'
 
-    Em alguns casos raros, os nomes de codificação Python diferem dos nomes suportados pela especificação HTTP. Em seguida, você deve fazer as duas coisas: primeiro definir o Response.content_typecabeçalho (que é enviado ao cliente inalterado) e, em seguida, definir o Response.charsetatributo (que é usado para codificar unicode).'''
+    
+    Em alguns casos raros, os nomes de codificação Python diferem dos nomes suportados pela especificação HTTP. Em seguida, você deve fazer as duas coisas: primeiro definir o Response.content_type cabeçalho (que é enviado ao cliente inalterado) e, em seguida, definir o Response.charset atributo (que é usado para codificar unicode).'''
