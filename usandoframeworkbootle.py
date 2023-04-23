@@ -1,8 +1,6 @@
-from bottle import route, run, template, static_file,get, post, request, redirect, response 
-import sys
+from bottle import route, run, template, static_file,get, post, request, redirect 
 
-print(">>>>>>>>>>>>>>>", sys.getdefaultencoding())
-#from bottle import route, run, template, static_file, get, post, request, redirect  
+ 
 # usuariosautorizados={"Maria":"mariauser", "João":"joaouser","Antonio":"Antoniouser" }
 
 usuarios_autorizados = [
@@ -12,7 +10,6 @@ usuarios_autorizados = [
 ]
 
 #rota  para arquivos estáticos
-
 @route('/static/<filename>')
 def server_static(filename):
     return static_file(filename, root='./views/static')
@@ -30,34 +27,21 @@ def wrong():
    redirect("/login")
 
 
-'''@route('/login')
-def get_iso():
-    response.charset='UTF-8'
-    return u'This will be sent with ISO-LATIN-1 encoding.'
-
-
-@route('/login')
-def get_latin():
-    response.content_type = 'text/html; charset=latin1'
-    return u'UTF-8 is also known as ISO-LATIN-1.'
-'''
 
 @get('/login')  # or @route('/login')
 def login():
     return template('login')
-
-
-
-
-
 
 @post('/login', method='POST')
 def do_login():
        
     message = None
 
+    
+   
+
     try:
-        username = request.forms.get('username')
+        username = request.forms.getunicode('username', None)
         password = request.forms.get('password', None)
        
         print (username)
