@@ -76,11 +76,12 @@ def do_login():
         return template("index", usuario_autenticado) if message is None else template("erro", message=message)
 
 
-run(host='localhost', port=8080, debug=True)
+#run(host='localhost', port=8080, debug=True)
+run()
 
-
-
-'''from bottle import response
+'''
+Por padrão, o servidor web atende as páginas no localhost e na porta 8080. Além disso, importamos o route, que é a função
+from bottle import response
 @route('/iso')
 def get_iso():
     response.charset = 'ISO-8859-15'
