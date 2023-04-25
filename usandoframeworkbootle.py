@@ -1,4 +1,5 @@
-from bottle import route, run, template, static_file,get, post, request, redirect 
+from bottle import route, run, template, static_file,get, post, request, redirect, response, error
+ 
 
  
 # usuariosautorizados={"Maria":"mariauser", "João":"joaouser","Antonio":"Antoniouser" }
@@ -28,9 +29,17 @@ def wrong():
 
 
 
+
 @get('/login')  # or @route('/login')
 def login():
     return template('login')
+
+@error(404)
+def error404(error):
+    return 'Essa pagina Não existe camarada'
+
+
+
 
 @post('/login', method='POST')
 def do_login():
@@ -41,6 +50,8 @@ def do_login():
    
 
     try:
+        print(f'o status = {response.status} é esse')
+        print(response.get_header('Set-Cookie', 'name= pt-br'))
         username = request.forms.getunicode('username', None)
         password = request.forms.get('password', None)
        
