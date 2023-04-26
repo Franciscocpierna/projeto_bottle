@@ -1,7 +1,5 @@
 from bottle import route, run, template, static_file,get, post, request, redirect, response, error
- 
-
- 
+import bottle 
 # usuariosautorizados={"Maria":"mariauser", "João":"joaouser","Antonio":"Antoniouser" }
 
 usuarios_autorizados = [
@@ -40,6 +38,9 @@ def error404(error):
 
 
 
+# limpar cache
+
+bottle.TEMPLATES.clear()
 
 @post('/login', method='POST')
 def do_login():
@@ -50,6 +51,8 @@ def do_login():
    
 
     try:
+        ip = request.environ.get('REMOTE_ADDR')
+        print(f'o ip = >>>>>>>>>>>>>{ip}')
         print(f'o status = {response.status} é esse')
         print(response.get_header('Set-Cookie', 'name= pt-br'))
         username = request.forms.getunicode('username', None)
@@ -88,7 +91,7 @@ def do_login():
 
 
 #run(host='localhost', port=8080, debug=True)
-run()
+run(reloader=True)
 
 '''
 Por padrão, o servidor web atende as páginas no localhost e na porta 8080. Além disso, importamos o route, que é a função
