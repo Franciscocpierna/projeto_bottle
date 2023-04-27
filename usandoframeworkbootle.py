@@ -31,12 +31,11 @@ def wrong():
 @get('/login')  # or @route('/login')
 def login():
     return template('login')
-
+mensage=None
 @error(404)
 def error404(error):
-    return 'Essa pagina Não existe camarada'
-
-
+    message=response.status
+    return template("erro", message=message)
 
 # limpar cache
 
@@ -62,8 +61,9 @@ def do_login():
         print(password)
                  
        
-        if username=="":   
-              raise Exception("Campo username não informado")
+        if username=="":
+          if response.status=='200 OK':  
+            raise Exception("Campo username não informado status= 200")
 
     except Exception as ex:
        message = ex
