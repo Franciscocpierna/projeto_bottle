@@ -25,17 +25,17 @@ def server_static(filename):
 def wrong():
    redirect("/login")
 
-
+situacao=''
 
 
 @get('/login')  # or @route('/login')
 def login():
     return template('login')
-mensage=None
+message=None
 @error(404)
 def error404(error):
-    message=response.status
-    return template("erro", message=message)
+    situacao=response.status
+    return template("erro", message=message, situacao=situacao)
 
 # limpar cache
 
@@ -63,6 +63,7 @@ def do_login():
        
         if username=="":
           if response.status=='200 OK':  
+            situacao = '200 OK'
             raise Exception("Campo username não informado status= 200")
 
     except Exception as ex:
@@ -87,11 +88,11 @@ def do_login():
 
     finally:
 
-        return template("index", usuario_autenticado) if message is None else template("erro", message=message)
+        return template("index", usuario_autenticado) if message is None else template("erro", message=message, situacao=situacao)
 
 
 #run(host='localhost', port=8080, debug=True)
-run(reloader=True)
+run(reloader=True, debug=True)
 
 '''
 Por padrão, o servidor web atende as páginas no localhost e na porta 8080. Além disso, importamos o route, que é a função
