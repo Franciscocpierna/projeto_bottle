@@ -5,6 +5,31 @@ body {
 
 }
 
+html body {
+       height: 100vh;
+       width: 100vw;
+       background-color: black;
+}
+
+main {
+   position: relative;
+   height: 100vh;
+   background-color: green;
+} 
+
+section#pgna {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: -50% -50%;
+     height: 500px;
+     width: 500px;
+     background-color: blue;
+    
+    }
+
+
+
 body > article > p {
   color:  rgb(20, 1, 1);  
   margin-right: auto;

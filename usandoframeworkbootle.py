@@ -94,18 +94,3 @@ def do_login():
 #run(host='localhost', port=8080, debug=True)
 run(reloader=True, debug=True)
 
-'''
-Por padrão, o servidor web atende as páginas no localhost e na porta 8080. Além disso, importamos o route, que é a função
-from bottle import response
-@route('/iso')
-def get_iso():
-    response.charset = 'ISO-8859-15'
-    return u'This will be sent with ISO-8859-15 encoding.'
-
-@route('/latin9')
-def get_latin():
-    response.content_type = 'text/html; charset=latin9'
-    return u'ISO-8859-15 is also known as latin9.'
-
-    
-    Em alguns casos raros, os nomes de codificação Python diferem dos nomes suportados pela especificação HTTP. Em seguida, você deve fazer as duas coisas: primeiro definir o Response.content_type cabeçalho (que é enviado ao cliente inalterado) e, em seguida, definir o Response.charset atributo (que é usado para codificar unicode).'''
