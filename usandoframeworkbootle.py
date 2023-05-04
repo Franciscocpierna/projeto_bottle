@@ -13,12 +13,6 @@ usuarios_autorizados = [
 def server_static(filename):
     return static_file(filename, root='./views/static')
 
-# redirecionamento de página
-
-#@get('/')
-#@route('/login')
-#def wrong():
-#   redirect("https://franciscocpierna.github.io/projeto-social-/")
 
 @get('/')
 @route('/login')

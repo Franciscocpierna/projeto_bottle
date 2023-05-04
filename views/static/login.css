@@ -20,3 +20,7 @@ html body {
        background-color: var(--cor6) ;
 }
 
+
+div#horas {
+    text-align: center;
+}

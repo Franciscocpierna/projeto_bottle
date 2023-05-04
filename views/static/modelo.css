@@ -11,19 +11,22 @@
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
 }
 
+div#horas {
+    text-align: left;
+}
 
-
-html body {
+/*html body {
        height: 100vh;
        width: 100vw;
        background-color: rgb(203, 211, 218);
 }
-
+*/
 main {
    position: relative;
    height: 100vh;
-   /*background-color:var(--cor3);*/
-   background-color: rgb(203, 211, 218);
+   /*background-color:var(--cor3);
+   background-color: rgb(203, 211, 218);*/
+   /*background-color: rgb(243, 236, 236);*/
 } 
 
 section#pgna {
@@ -64,7 +67,7 @@ a {
     
     position: absolute;
     left: 860px;
-    top: 100px;
+    top: 200px;
     width: 300px;
     height: 200px;
     
@@ -72,7 +75,7 @@ a {
 }
 
 
-h1{
+h1#centrado{
     font-family: var(--fonte-padrao);
     margin: auto;
     text-align: center;
