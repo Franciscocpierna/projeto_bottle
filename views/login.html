@@ -4,11 +4,12 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./static/modelo.css"> 
+    <link rel="stylesheet" href="./static/login.css"> 
 </head>
-<body>
+<body onload="carregar()">
     
- <div id = "formulario">
+ <div id = "horas"></div> <br><br>
+<div id="formulario">
     <form action="/login" method="post">
         Username: <input name="username" type="text"/>
         Password: <input name="password" type="password" />
@@ -19,5 +20,6 @@
 </div>
 
 <!--<form action="/login" method="post" enctype="multipart/form-data"> -->
+ <script src="./static/horas.js"></script>
 </body>
 </html>

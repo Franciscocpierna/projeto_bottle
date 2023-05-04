@@ -11,32 +11,30 @@
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
 }
 
-body {
-    background-color: rgb(203, 211, 218);
 
-}
 
 html body {
        height: 100vh;
        width: 100vw;
-       background-color: black;
+       background-color: rgb(203, 211, 218);
 }
 
 main {
    position: relative;
    height: 100vh;
-   background-color:var(--cor3);
+   /*background-color:var(--cor3);*/
+   background-color: rgb(203, 211, 218);
 } 
 
 section#pgna {
      position: absolute;
-     top: 50%;
+    /* top: 50%;
      left: 50%;
      transform: -50% -50%;
      height: 500px;
      width: 500px;
      background-color: blue;
-    
+    */
     }
 
 
