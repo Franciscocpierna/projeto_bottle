@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@media all {
+* {
+   margin: 0px;
+   padding: 0px;
+
+}
+
 :root {
     --cor0: #ebe5c5;
     --cor1: #83e1ad;
@@ -10,12 +17,16 @@
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
 }
-
-body {
-  margin: 0px;
-  padding: 0px; 
-
 }
+
+@media screen  and (orientation: portrait) {
+    
+}
+
+@media screen and (orientation: landscape) {
+    
+}
+
 div#horas {
     text-align: left;
 }
@@ -27,8 +38,6 @@ div#horas {
 }
 */
 main {
-   margin: 0px;
-   padding: 0px; 
    position: relative;
    height: 100vh;
    /*background-color:var(--cor3);
@@ -37,8 +46,6 @@ main {
 } 
 
 section#pgna {
-     margin: 0px;
-     padding: 0px;
      position: absolute;
     /* top: 50%;
      left: 50%;
@@ -48,6 +55,7 @@ section#pgna {
      background-color: blue;
     */
     }
+
 
 
 
