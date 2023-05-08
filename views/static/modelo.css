@@ -6,6 +6,7 @@
    padding: 0px;
 
 }
+}
 
 :root {
     --cor0: #ebe5c5;
@@ -17,44 +18,76 @@
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
 }
+
+@media screen  and (min-width: 80px) and (max-width: 660px) {
+    body#corpo {
+    display: block;    
+    position: relative;
+    width: 658px;
+    }  
+
+    
+    aside > img {
+    
+        position: absolute;
+        left: 10px;
+        top: 400px;
+        width: 300px;
+        height: 200px;
+      
+    }  
+
 }
 
-@media screen  and (orientation: portrait) {
+@media screen  and (min-width: 768px) and (max-width: 992px) {
+    body#corpo {
+      display: block;  
+      position: relative;  
+      width: 80vw;
+    }
+
+    aside > img {
+        display: block;
+        position: absolute;
+        left: 860px;
+        top: 200px;
+        width: 300px;
+        height: 200px;
+        
     
+    }
 }
 
-@media screen and (orientation: landscape) {
-    
+@media screen and (min-width: 992px) {
+    body#corpo { 
+      display: block;  
+      width: 990px;
+    } 
+    aside > img {
+        position: absolute;
+        left: 860px;
+        top: 200px;
+        width: 300px;
+        height: 200px;
+      
+    }  
 }
 
 div#horas {
     text-align: left;
 }
 
-/*html body {
-       height: 100vh;
-       width: 100vw;
-       background-color: rgb(203, 211, 218);
-}
-*/
+
+
 main {
    position: relative;
    height: 100vh;
-   /*background-color:var(--cor3);
-   background-color: rgb(203, 211, 218);*/
-   /*background-color: rgb(243, 236, 236);*/
+   
 } 
 
 section#pgna {
      position: absolute;
-    /* top: 50%;
-     left: 50%;
-     transform: -50% -50%;
-     height: 500px;
-     width: 500px;
-     background-color: blue;
-    */
-    }
+ }
 
 
 
@@ -80,16 +113,7 @@ a {
 
  
 
- aside > img {
-    
-    position: absolute;
-    left: 860px;
-    top: 200px;
-    width: 300px;
-    height: 200px;
-    
 
-}
 
 
 h1#centrado{
@@ -132,7 +156,4 @@ footer p#rodape {
 footer a#ligado {
 
     color: #063d1e;
-
-}
-
-
+}    
