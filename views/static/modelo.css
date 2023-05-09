@@ -4,8 +4,19 @@
 * {
    margin: 0px;
    padding: 0px;
-
+   
+  
 }
+aside > img {
+    width: 300px;
+    height: 200px;
+}
+
+p#informacao {
+    float: left;
+    text-align: justify;
+ }
+
 }
 
 :root {
@@ -21,9 +32,10 @@
 
 @media screen  and (min-width: 80px) and (max-width: 660px) {
     body#corpo {
+    padding: 10px;   
     display: block;    
     position: relative;
-    width: 658px;
+    width: auto;
     }  
 
     
@@ -32,50 +44,55 @@
         position: absolute;
         left: 10px;
         top: 400px;
-        width: 300px;
-        height: 200px;
+        
       
     }  
 
 }
 
-@media screen  and (min-width: 768px) and (max-width: 992px) {
+
+
+/*@media screen  and (min-width: 768px) and (max-width: 992px) {*/
+@media screen  and (min-width:661px) and (max-width: 992px) {
     body#corpo {
+      padding: 10px;  
       display: block;  
       position: relative;  
-      width: 80vw;
+      width: auto; /*992*/
     }
 
     aside > img {
-        display: block;
+        
         position: absolute;
-        left: 860px;
+        left: 460px;
         top: 200px;
-        width: 300px;
-        height: 200px;
+        
         
     
     }
 }
 
 @media screen and (min-width: 992px) {
-    body#corpo { 
+
+    body#corpo {
+      padding: 10px;   
       display: block;  
       width: 990px;
     } 
     aside > img {
         position: absolute;
-        left: 860px;
+        left: 800px;
         top: 200px;
-        width: 300px;
-        height: 200px;
-      
+    }
+    footer {
+        display: block;
+        width: 992px;
+
     }  
 }
 
-div#horas {
-    text-align: left;
-}
+
+
 
 
 
@@ -96,7 +113,7 @@ body > article > p {
   color:  rgb(20, 1, 1);  
   margin-right: auto;
   text-align: justify;
-  width: 500px;
+  width: auto; 
 } 
 
 a {
@@ -106,10 +123,7 @@ a {
     background-color: rgb(21, 145, 124);
  }
 
- .texto {
-    text-align: left;
-    width: 500px;
- }
+
 
  
 
@@ -128,9 +142,10 @@ h1:hover {
 
 
 footer {
+    display: block;
     background-color: var(--cor5);
     color:blue;
-    text-align: center;
+    width: auto;
     font-size: 0.8em;
     padding: 5px;
 
@@ -149,11 +164,12 @@ footer a:hover {
 }
 
 footer p#rodape {
+    
 
     color: white;
 }
 
 footer a#ligado {
-
+     
     color: #063d1e;
 }    
