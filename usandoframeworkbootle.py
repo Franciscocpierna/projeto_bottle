@@ -50,6 +50,7 @@ def do_login():
         print(response.get_header('Set-Cookie', 'name= pt-br'))
         username = request.forms.getunicode('username', None)
         password = request.forms.get('password', None)
+        
        
         print (username)
         print(password)
@@ -78,6 +79,7 @@ def do_login():
                 break
 
         if usuario_autenticado == {}:
+            situacao = response.status
             message = "Login Falhou"
 
     finally:
