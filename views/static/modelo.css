@@ -1,23 +1,81 @@
 @charset "UTF-8";
 
-@media all {
-* {
+
+ *{
    margin: 0px;
    padding: 0px;
    
   
 }
-aside > img {
+/*essa classe definida diretamente nesse arquivo css*/
+.hide {
+    display: none;
+}
+
+.texto > input#botao {
+    position: absolute;
+    border-radius: 10px;
+    color: var(--cor4);
+    left: 35px;
+    height: 30px;
+}
+
+
+ 
+
+.texto > input#botao:hover {
+      
+    background-color: rgb(227, 227, 239);
+}
+
+select#flista {
+    position: absolute;
+    width: 170px;
+    height: 130px;
+    top: 465px;
+    left: 58px;
+    border-radius: 7px;
+     
+} 
+
+aside#imagem2 > img#tv {
+       
+    padding: 10px;
+    top: 400px;
+    left: 30px;
+    width: 300px;
+    height: 200px
+    
+        
+   }
+
+ 
+     
+   div#contem {
+    position: absolute;
+    width: 560px;
+    height: 345px;
+    background-color: red;
+    display:none;
+    left: 800px; 
+    top: 600px; 
+    
+    }
+ aside#imagem1 > img#chico {
+    position: absolute;
     width: 300px;
     height: 200px;
+    left: 10px;
+  
 }
 
-p#informacao {
-    float: left;
-    text-align: justify;
- }
-
-}
+ body#corpo {
+    position: relative;  
+    display: block;
+    width: auto;
+    padding: 25px;
+    left: 8px;   } 
+   
 
 :root {
     --cor0: #ebe5c5;
@@ -31,64 +89,49 @@ p#informacao {
 }
 
 @media screen  and (min-width: 80px) and (max-width: 660px) {
-    body#corpo {
-    padding: 10px;   
-    display: block;    
-    position: relative;
-    width: auto;
-    }  
-
-    
-    aside > img {
-    
-        position: absolute;
-        left: 10px;
-        top: 400px;
+     
+       
+    aside#imagem1 > img#chico {
+        top: 1000px;
         
-      
+   
     }  
 
+    
+    
 }
 
 
 
 /*@media screen  and (min-width: 768px) and (max-width: 992px) {*/
 @media screen  and (min-width:661px) and (max-width: 992px) {
-    body#corpo {
-      padding: 10px;  
-      display: block;  
-      position: relative;  
-      width: auto; /*992*/
-    }
+            
 
-    aside > img {
-        
-        position: absolute;
+    aside#imagem1 > img#chico {
         left: 460px;
         top: 200px;
-        
-        
-    
+ 
+    }  
+    select#flista {
+        top: 445px;
     }
-}
+        
+     }
+
 
 @media screen and (min-width: 992px) {
 
-    body#corpo {
-      padding: 10px;   
-      display: block;  
-      width: 990px;
-    } 
-    aside > img {
-        position: absolute;
+    
+    aside#imagem1 > img#chico {
         left: 800px;
         top: 200px;
-    }
-    footer {
-        display: block;
-        width: 992px;
 
+      
     }  
+    select#flista {
+        top: 427px;
+    }
+ 
 }
 
 
@@ -96,27 +139,27 @@ p#informacao {
 
 
 
-main {
-   position: relative;
-   height: 100vh;
-   
-} 
-
-section#pgna {
-     position: absolute;
- }
 
 
 
 
-body > article > p {
+
+ p#informacao {
+   margin-left: 5px;
+   text-align: justify;
+}
+
+ .texto {   
   color:  rgb(20, 1, 1);  
   margin-right: auto;
   text-align: justify;
+  margin-left: 15px;
+  padding: 10px;
   width: auto; 
 } 
 
 a {
+    margin: 10px;
     background-color: white;
 } 
  a:hover {
@@ -140,12 +183,14 @@ h1:hover {
     background-color: bisque;
 }
 
-
 footer {
-    display: block;
+    
+    position: absolute;
+    top: 650px;
     background-color: var(--cor5);
     color:blue;
-    width: auto;
+    width: 100%;
+
     font-size: 0.8em;
     padding: 5px;
 
