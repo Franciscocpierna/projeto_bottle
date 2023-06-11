@@ -74,7 +74,8 @@ aside#imagem2 > img#tv {
     display: block;
     width: auto;
     padding: 25px;
-    left: 8px;   } 
+    left: 8px;   
+} 
    
 
 :root {
@@ -88,17 +89,49 @@ aside#imagem2 > img#tv {
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
 }
 
-@media screen  and (min-width: 80px) and (max-width: 660px) {
+@media screen  and (min-width: 30px) and (max-width: 660px) {
      
        
     aside#imagem1 > img#chico {
-        top: 1000px;
-        
-   
+        top: 920px;
+       
     }  
+    aside#imagem2 > img#tv {
+       
+        padding: 10px;
+        top: 440px;
+        left: 30px;
+        width: 400px;
+        height: 300px;
+        
+            
+       }
+    
+    body#corpo {
+        position: relative;  
+        display: block;
+        width: auto;
+        padding: 0px;
+        left: 0px;  
+     } 
+     select#flista {
+        position: absolute;
+        width: 240px;
+        height: 230px;
+        top: 590px;
+        left: 30px;
+        border-radius: 7px;
+         
+    } 
+    
+    footer {
+    
+     
+        top: 1500px;
+     
+    
+    }
 
-    
-    
 }
 
 
@@ -186,7 +219,7 @@ h1:hover {
 footer {
     
     position: absolute;
-    top: 650px;
+    top: 1300px;
     background-color: var(--cor5);
     color:blue;
     width: 100%;
